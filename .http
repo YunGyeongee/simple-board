@@ -1,0 +1,27 @@
+### 게시글 전체 가져오기
+GET http://localhost:3000/board
+
+### 게시글 가져오기
+GET http://localhost:3000/board/11
+
+### 생성
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "name": "Inez Dooley",
+    "contents": "Content 11"
+}
+
+### 수정
+PUT http://localhost:3000/board/11
+content-type: application/json
+
+{
+    "name": "Inez New",
+    "contents": "Content 11"
+}
+
+### 삭제
+DELETE http://localhost:3000/board/1
+content-type: application/json
