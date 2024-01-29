@@ -1,9 +1,7 @@
-import { ArgumentsHost, ExceptionFilter, HttpException } from '@nestjs/common';
+import { ArgumentsHost, Catch, ExceptionFilter, HttpException } from "@nestjs/common";
 import { Request, Response } from 'express';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-@Cache(HttpException)
+@Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   /**
    * eslint-disable-next-line @typescript-eslint/ban-ts-comment
