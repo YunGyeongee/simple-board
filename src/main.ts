@@ -6,7 +6,7 @@ import { HttpExceptionFilter } from './exceptions/http-exceptions.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.useGlobalFilters(new HttpExceptionFilter);
+  // app.useGlobalFilters(new HttpExceptionFilter);
   const config = new DocumentBuilder()
     .setTitle('Cats example')
     .setDescription('The cats API description')
